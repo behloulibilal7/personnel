@@ -5,4 +5,6 @@ public interface Passerelle
     public int insert(Ligue ligue) throws SauvegardeImpossible;
 	// nouvelle méthode ajoutée pour insérer un employé dans la base de données
     public int insert(Employe employe) throws SauvegardeImpossible; 
+	//mise à jour de liguedd
+	public  int update(Ligue ligue) throws SauvegardeImpossible;
 }

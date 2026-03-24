@@ -106,7 +106,7 @@ public class JDBC implements Passerelle
         }        
     }
 
-    // ---------------- Méthode insert(Employe) ----------------
+    //  Méthode insert(Employe) 
     @Override
     public int insert(Employe employe) throws SauvegardeImpossible
     {
@@ -136,4 +136,24 @@ public class JDBC implements Passerelle
             throw new SauvegardeImpossible(exception);
         }
     }
+}
+//Implementation de la methode update 
+@Override
+public void update(Ligue ligue) throws SauvegardeImpossible 
+{
+    try 
+    {
+        PreparedStatement instruction;
+        instruction = connection.prepareStatement(
+            "UPDATE ligue SET nom = ? WHERE id = ?"
+        );
+        instruction.setString(1, ligue.getNom());
+        instruction.setInt(2, ligue.getId());
+        instruction.executeUpdate();
+    } 
+    catch (SQLException exception) 
+    {
+        exception.printStackTrace();
+        throw new SauvegardeImpossible(exception);
+    }       
 }

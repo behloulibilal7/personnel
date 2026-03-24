@@ -160,3 +160,9 @@ public class GestionPersonnel
         return passerelle.insert(employe);
     }
 }
+
+//ajoute de la methode update 
+public void update(Ligue ligue) throws SauvegardeImpossible
+{
+    passerelle.update(ligue);
+}

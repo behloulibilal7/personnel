@@ -73,3 +73,13 @@ public class Ligue implements Serializable, Comparable<Ligue> {
     @Override
     public String toString() { return nom; }
 }
+//appel a gestionpersonnel.update(this) pour mettre à jour le nom de la ligue dans la base de données
+public void setNom(String nom)
+{
+    this.nom = nom;
+    try {
+        gestionPersonnel.update(this);
+    } catch (SauvegardeImpossible e) {
+        System.out.println("Erreur lors de la mise à jour de la ligue : " + e.getMessage());
+    }
+}
