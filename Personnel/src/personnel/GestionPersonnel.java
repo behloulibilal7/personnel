@@ -114,3 +114,26 @@ public class GestionPersonnel implements Serializable
 		return root;
 	}
 }
+//Ajout de la méthode insert(Employe)
+
+public class GestionPersonnel
+{
+    private Passerelle passerelle;
+    private Employe root;
+
+    public int insert(Employe employe) throws SauvegardeImpossible
+    {
+        return passerelle.insert(employe);
+    }
+
+    // ---------------- Création du root ----------------
+    public void addRoot(String nom, String prenom, String mail, String password) throws SauvegardeImpossible
+    {
+        if (root != null && root.getId() != -1) return; // root déjà créé
+        root = new Employe(this, null, nom, prenom, mail, password);
+        int rootId = insert(root);
+        root.setId(rootId);
+    }
+
+    public Employe getRoot() { return root; }
+}
