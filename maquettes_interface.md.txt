@@ -1,0 +1,56 @@
+Maquettes Interface Graphique
+    Utilisateur:
+
+Samir Crypto
+
+Objectif
+
+    Créer une interface graphique pour gérer :
+
+    .les ligues
+    .les employés
+    .les administrateurs
+1. Fenêtre de connexion
+    Contenu :
+    .Champ login
+    .Champ mot de passe
+    .Bouton "Se connecter"
+Fonction :
+
+    Permet à l'utilisateur (root ou employé) de se connecter.
+
+2. Fenêtre principale
+    Contenu :
+    /Liste des ligues
+    .Bouton "Ajouter ligue"
+    .Bouton "Supprimer ligue"
+    .Bouton "Modifier ligue"
+Fonction :
+
+    Afficher et gérer les ligues.
+
+3. Fenêtre gestion des employés
+    Contenu :
+    .Liste des employés
+    .Bouton "Ajouter employé"
+    .Bouton "Modifier employé"
+    .Bouton "Supprimer employé"
+Fonction :
+
+    Permet de gérer les employés d’une ligue.
+
+4. Fenêtre ajouter/modifier employé
+    Contenu :
+    .Champ nom
+    .Champ prénom
+    .Champ mail
+    .Champ mot de passe
+    .Bouton "Valider"
+5. Fenêtre admin ligue
+    Contenu :
+    .Liste des employés
+    .Bouton "Définir administrateur"
+6. Gestion du root
+Fonction :
+    -Accès à toutes les ligues
+    -Peut gérer tous les employés
